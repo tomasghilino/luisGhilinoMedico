@@ -1,7 +1,15 @@
 import * as React from "react"
-
+import "normalize.css"
+import Layout from "../components/Layout"
+import Hero from "../components/Hero"
+import Patologias from "../components/Patologias"
 const App = () => {
-  return <h1>Hola pa</h1>
+  return (
+    <Layout>
+      <Hero />
+      <Patologias />
+    </Layout>
+  )
 }
 
 export default App
