@@ -2,6 +2,13 @@ import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
 
+    :root{
+        --primary: #189AB4;
+        --secondary: #75E6DA;
+        --darker: #05445E;
+        --brighter: #D4F1F4;
+    }
+
     /* apply a natural box layout model to all elements, but allowing components to change */
     html {
     box-sizing: border-box;
@@ -11,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background-color: #6e0707;
+
+        background-color: var(--brighter);
     }
 `
