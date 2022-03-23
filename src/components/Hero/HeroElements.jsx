@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
-    
+    overflow: hidden;
     height: 100vh;
 `;
 
@@ -12,7 +12,6 @@ export const BackgroundVideo = styled.video`
     bottom: 0;
     transform: translateX(calc((100% - 100vw) / 2));
     filter: brightness(80%);
-    overflow: hidden;
 `;
 
 export const HeroContent = styled.div`
