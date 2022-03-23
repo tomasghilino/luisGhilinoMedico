@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-
+        font-family: "Nunito", sans-serif;
         background-color: var(--brighter);
     }
 `
