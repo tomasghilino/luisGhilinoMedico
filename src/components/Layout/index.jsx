@@ -6,7 +6,6 @@ const Layout = props => {
   return (
     <>
       <GlobalStyle />
-      <h1>Layout</h1>
       {props.children}
     </>
   )
