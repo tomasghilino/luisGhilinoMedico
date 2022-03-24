@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const HeroContainer = styled.div`
-    overflow: hidden;
+    position: relative;
     height: 100vh;
+    overflow: hidden;
+
 `;
 
 export const BackgroundVideo = styled.video`
@@ -11,7 +13,7 @@ export const BackgroundVideo = styled.video`
     right: 0;
     bottom: 0;
     transform: translateX(calc((100% - 100vw) / 2));
-    filter: brightness(80%);
+    filter: brightness(70%);
 `;
 
 export const HeroContent = styled.div`
@@ -23,8 +25,24 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroContentTitulo = styled.div`
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 30rem;       // ???????????????????????????????????????????????????
+    color: var(--brighter);
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    h1::after {
+        display: block;
+        content: '';
+        height: 2px;
+        width: 75%;
+        background-color: var(--darker);
+        margin-top: 2rem;
+    }
+
 `;
 
 export const HeroContentIcons = styled.div`
