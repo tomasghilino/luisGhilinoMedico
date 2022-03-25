@@ -11,13 +11,10 @@ const Hero = () => {
 
       <HeroContent>
         <HeroContentTitulo>
-          <h1>Luis Ghilino</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam qui cupiditate adipisci provident inventore vero quibusdam ex, quaerat voluptatum dolore!</p>
+          <h1>Dr. Ghilino Luis Antonio</h1> 
+          <p>Médico Traumatólogo - 20 años experiencia</p>
+          <p>Diagnóstico y tratamiento de patologías crónicas</p>
         </HeroContentTitulo>
-
-        <HeroContentIcons>
-          <img src={kneeIcon} alt="" />
-        </HeroContentIcons>
       </HeroContent>
 
       <BackgroundVideo muted loop autoPlay>                           
