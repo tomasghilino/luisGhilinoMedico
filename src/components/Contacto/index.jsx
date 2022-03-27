@@ -1,7 +1,23 @@
 import React from 'react';
+import Map from '../ui/Map';
+import Formulario from '../ui/Form';
+
+//styles
+import { ContactoContainer, ContactoFormContainer, ContactoMapContainer } from "./ContactoElements";
 
 const Contacto = () => {
-    return ( <h1>contactos</h1> );
+    return ( 
+
+        <ContactoContainer>
+            <ContactoFormContainer>
+                <Formulario />
+            </ContactoFormContainer>
+            <ContactoMapContainer>
+                <Map />
+            </ContactoMapContainer>
+        </ContactoContainer>
+
+     );
 }
  
 export default Contacto;
