@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         --brighter: #D4F1F4;
         --white: #eff6f7;
         --black: #010c11;
+        --gray : #f1f1f1;
     }
 
     /* apply a natural box layout model to all elements, but allowing components to change */
@@ -21,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body{
         font-family: "Nunito", sans-serif;
-        background-color: var(--brighter);
+        background-color: var(--gray);
     }
 
     p, h1, h2, h3, h4 {
