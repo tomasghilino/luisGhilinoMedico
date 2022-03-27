@@ -10,7 +10,7 @@ const Servicios = () => {
       <ServiciosContainer>
         <Card
           title={"Artrosis"}
-          src={"/media/kneePain.jpeg"}
+          src={"/kneePain.jpeg"}
           alt={"artrosis rodilla"}
           text={
             "Tipo de artritis que se produce cuando el tejido flexible en los extremos de los huesos se desgasta."
@@ -18,7 +18,7 @@ const Servicios = () => {
         />
         <Card
           title={"Reuma"}
-          src={"/media/wristPain.jpg"}
+          src={"/wristPain.jpg"}
           alt={"reuma dolor"}
           text={
             "Reuma, o reumatismo, es un término no específico que se refiere a diversas condiciones médicas que afectan a las articulaciones, los huesos, cartílagos , ligamentos, tendones y el tejido conectivo."
@@ -26,13 +26,13 @@ const Servicios = () => {
         />
         <Card
           title={"Columna"}
-          src={"/media/backpain.jpg"}
+          src={"/backpain.jpg"}
           alt={"columna dolor"}
           text={"Tratamiento de dolor de espalda y/o columna."}
         />
         <Card
           title={"Artrosis"}
-          src={"/media/kneePain.jpeg"}
+          src={"/kneePain.jpeg"}
           alt={"artrosis rodilla"}
           text={
             "Tipo de artritis que se produce cuando el tejido flexible en los extremos de los huesos se desgasta."

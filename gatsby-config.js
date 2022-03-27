@@ -13,7 +13,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `media`,
-        path: `${__dirname}/src/media`,
+        path: `${__dirname}/src`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -29,7 +29,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/media/logo.png`, // This path is relative to the root of the site.
+        icon: `static/logo.png`, // This path is relative to the root of the site.
       },
     },
     {
