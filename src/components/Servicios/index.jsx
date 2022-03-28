@@ -31,11 +31,23 @@ const Servicios = () => {
           text={"Tratamiento de dolor de espalda y/o columna."}
         />
         <Card
-          title={"Artrosis"}
-          src={"/kneePain.jpeg"}
-          alt={"artrosis rodilla"}
+          title={"Infiltraciones"}
+          src={"/infiltracionRodilla.jpg"}
+          alt={"infiltracion rodilla"}
+          text={"Todo tipo de infiltraciones."}
+        />
+        <Card
+          title={"Inmovilizaciones con yeso"}
+          src={"/yeso.jpg"}
+          alt={"yeso inmovilizacion"}
+          text={"Inmovilizaciones de articulaciones con yeso."}
+        />
+        <Card
+          title={"Confección de plantillas para buena marcha"}
+          src={"/zuela.jpeg"}
+          alt={"plantilla zuela"}
           text={
-            "Tipo de artritis que se produce cuando el tejido flexible en los extremos de los huesos se desgasta."
+            "Confecciono plantillas de pie para que usted pueda corregir su pisada, y caminar mejor."
           }
         />
       </ServiciosContainer>
