@@ -13,6 +13,10 @@ export const CardContainer = styled.div`
   box-shadow: 11px 9px 11px -8px rgba(0, 0, 0, 0.39);
   -webkit-box-shadow: 11px 9px 11px -8px rgba(0, 0, 0, 0.39);
   -moz-box-shadow: 11px 9px 11px -8px rgba(0, 0, 0, 0.39);
+
+  @media (max-width: 575px) {
+    font-size: 0.9rem;
+  }
 `
 
 export const CardTitle = styled.h1`
@@ -27,6 +31,10 @@ export const CardTitle = styled.h1`
     background-color: var(--primary);
   }
   color: var(--brighter);
+
+  @media (max-width: 575px) {
+    font-size: 1.2rem;
+  }
 `
 export const CardDescription = styled.div`
   display: flex;
