@@ -1,4 +1,5 @@
 import React from "react"
+import Footer from "./Footer"
 
 import { GlobalStyle } from "./LayoutElements"
 import Navbar from "./Navbar"
@@ -9,6 +10,7 @@ const Layout = props => {
       <GlobalStyle />
       <Navbar />
       {props.children}
+      <Footer />
     </>
   )
 }
