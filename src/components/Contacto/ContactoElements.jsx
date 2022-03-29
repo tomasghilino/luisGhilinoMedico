@@ -15,6 +15,7 @@ export const ContactoFormContainer = styled.div`
     justify-content: center;
     align-items: center;
     height: 800px;
+    width: 100%;
 
     background-color: var(--brighter);
 `;
@@ -22,4 +23,5 @@ export const ContactoFormContainer = styled.div`
 export const ContactoMapContainer = styled.div`
     display: flex;
     justify-content: center;
+    width: 100%;
 `;
