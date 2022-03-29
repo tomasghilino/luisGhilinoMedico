@@ -10,16 +10,17 @@ export const FormInfo = styled(Form)`
   padding: 1.3rem;
   text-align: center;
   font-family: var(--fontsecondary);
-  background-color: var(--primary);
+  background-color: var(--darker);
 
   h1 {
     font-family: 'PT Sans', sans-serif;
-    color: var(--brighter);
+    color: var(--white);
+    margin-bottom: 2rem;
   }
 `;
 
 export const FormInput = styled(Field)`
-  margin-top: 1rem;
+  margin: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
   border: none;
@@ -33,7 +34,7 @@ export const FormInput = styled(Field)`
 `;
 
 export const FormTextArea = styled.textarea`
-  margin-top: 1rem;
+  margin: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
   border: none;
@@ -46,7 +47,7 @@ export const FormTextArea = styled.textarea`
 `;
 
 export const FormSubmit = styled.input`
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border: 1px solid var(--darker);
   border-radius: 0.6rem;
   background-color: var(--white) !important;
@@ -66,7 +67,6 @@ export const FormSubmit = styled.input`
 `;
 
 export const FormError = styled(ErrorMessage)`
-  margin-top: .5rem;
   padding: 0.4rem;
   background-color: #e23737;
   border-radius: 0.7rem;

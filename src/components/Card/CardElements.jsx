@@ -34,7 +34,7 @@ export const CardTitle = styled.h1`
 
   @media (max-width: 575px) {
     font-size: 1.2rem;
-    margin-left: 0.5rem;
+    margin: 1rem .5rem 0 0;
   }
 `
 export const CardDescription = styled.div`

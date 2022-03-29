@@ -5,8 +5,7 @@ export const CustomIFrame = styled.iframe`
     height: 800px;
     border: 0;
 
-    @media(max-width: 768px){
-        width: 75%;
-        height: 600px;
+    @media(max-width: 768px) {
+        height: 550px;
     }
 `;
