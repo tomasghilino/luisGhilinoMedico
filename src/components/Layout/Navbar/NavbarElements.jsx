@@ -11,7 +11,7 @@ export const Nav = styled.nav`
   width: 100%;
   height: 80px;
   background-color: ${props =>
-    props.navbarChange ? "var(--primary)" : "transparent"};
+    props.navbarChange ? "var(--black)" : "transparent"};
   box-shadow: ${props =>
     props.navbarChange ? "0px 2px 10px rgba(0, 0, 0, 0.15)" : "transparent"};
   display: flex;
@@ -22,7 +22,7 @@ export const Nav = styled.nav`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    background-color: var(--primary);
+    background-color: var(--black);
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
   }
 `

@@ -38,10 +38,13 @@ export const FooterItem = styled.div`
 
 export const FooterItemText = styled.p`
   margin-left: 0.5rem;
+  overflow-wrap: anywhere; // <300px text wraps to prevent horizontal scroll
 `
 export const FooterItemLink = styled.a`
   margin-left: 0.5rem;
-
+  list-style: none;
+  text-decoration: none;
+  color: white;
   &:hover {
     cursor: pointer;
   }
