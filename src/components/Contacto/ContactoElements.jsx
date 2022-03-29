@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const ContactoContainer = styled.div`
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-direction: row;
 
     @media(max-width: 768px) {
-        
+        flex-direction: column;
     }
 `;
 
@@ -14,11 +14,12 @@ export const ContactoFormContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 65vh;
+    height: 800px;
 
     background-color: var(--brighter);
 `;
 
 export const ContactoMapContainer = styled.div`
-    height: 65vh;
+    display: flex;
+    justify-content: center;
 `;
