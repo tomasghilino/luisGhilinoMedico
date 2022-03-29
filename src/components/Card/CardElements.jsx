@@ -16,13 +16,13 @@ export const CardContainer = styled.div`
 
   @media (max-width: 575px) {
     font-size: 0.9rem;
+    flex-direction: column;
   }
 `
 
 export const CardTitle = styled.h1`
   margin-left: 1.5rem;
-  margin: 0;
-  padding: 1rem;
+
   &::after {
     display: block;
     content: "";
@@ -34,6 +34,7 @@ export const CardTitle = styled.h1`
 
   @media (max-width: 575px) {
     font-size: 1.2rem;
+    margin-left: 0.5rem;
   }
 `
 export const CardDescription = styled.div`
@@ -42,14 +43,19 @@ export const CardDescription = styled.div`
 `
 export const CardText = styled.p`
   color: white;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   margin-top: 0.2rem;
   line-height: 1.5;
+
+  @media (max-width: 575px) {
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+  }
 `
 
 export const CardImageContainer = styled.div`
   flex-shrink: 0;
-  flex-basis: 40%;
+  flex-basis: 50%;
 `
 export const CardImage = styled.img`
   display: block;
