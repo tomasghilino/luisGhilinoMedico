@@ -10,6 +10,7 @@ import {
 } from './FormElements';
 import AlertaMail from '../AlertaMail';
 import emailjs from '@emailjs/browser';
+import {GATSBY_SERVICE_ID_EMAILJS, GATSBY_TEMPLATE_ID_EMAILJS, GATSBY_USER_ID_EMAILJS} from 'gatsby-env-variables';
 
 // Functions and validations FORMIK
 const MyTextInput = ({ ...props }) => {
@@ -54,10 +55,10 @@ const Formulario = () => {
   const sendEmail = async () => {                                // SEND MAIL
     try {
       const result = await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID_EMAILJS,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID_EMAILJS,
+        GATSBY_SERVICE_ID_EMAILJS,
+        GATSBY_TEMPLATE_ID_EMAILJS,
         form.current,
-        process.env.NEXT_PUBLIC_USER_ID_EMAILJS
+        GATSBY_USER_ID_EMAILJS
       );
       if (result.status === 200) {
         setMailSentStatus(true);

@@ -6,7 +6,6 @@ import {
   BackgroundVideo,
   HeroContent,
   HeroContentTitulo,
-  HeroContentIcons,
 } from "./HeroElements"
 import videoHero from "../../../static/videoHero.webm"
 
