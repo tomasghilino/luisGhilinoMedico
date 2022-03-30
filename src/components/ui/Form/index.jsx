@@ -93,7 +93,7 @@ const Formulario = () => {
         <FormInfo
         ref={form}
         >
-          <h1>Contáctame</h1>
+          <h1>Contacto</h1>
 
           {alertShow ? <AlertaMail mailSentStatus={mailSentStatus} /> : null}
 

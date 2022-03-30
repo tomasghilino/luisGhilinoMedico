@@ -14,11 +14,29 @@ export const ContactoFormContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative;
     
     background-color: var(--brighter);
 
+    &::after{
+        position: absolute;
+        content: '';
+        right: -5px;
+        height: 80%;
+        width: 4px;
+        border-radius: 1rem;
+        background-color: var(--primary);
+    }
+
     @media(max-width: 768px) {
         height: 600px;
+
+        &::after{
+        right: auto;
+        bottom: -5px;
+        height: 4px;
+        width: 75%;
+    }
     }
 `;
 
