@@ -21,6 +21,7 @@ export const Nav = styled.nav`
   transition: background-color 0.2s ease-in;
 
   @media (max-width: 768px) {
+    font-size: 0.9rem;
     flex-direction: column;
     background-color: var(--black);
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
@@ -59,6 +60,7 @@ export const BarsIcon = styled(FaBars)`
 
   @media (max-width: 768px) {
     display: block;
+    font-size: 1.9rem;
   }
 `
 
