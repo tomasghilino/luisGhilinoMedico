@@ -15,6 +15,7 @@ export const InfoTitle = styled.h1`
   text-align: center;
   font-size: 2.5rem;
   color: var(--primary);
+  margin: 2rem;
 `
 
 export const InfoItems = styled.div`
@@ -42,10 +43,13 @@ export const InfoImg = styled.img`
 
 export const InfoTextContainer = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 export const InfoText = styled.p`
-  margin-top: 1rem;
+  margin: 1.5rem;
   font-size: 1.5rem;
-  color: #dedada;
+  color: var(--brighter);
   text-align: center;
 `

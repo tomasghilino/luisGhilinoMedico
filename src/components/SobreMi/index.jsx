@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import { css } from "styled-components";
 
 import {
   InfoTitle,
@@ -21,16 +22,18 @@ const SobreMi = () => {
 
         <InfoTextContainer>
           <InfoTitle>Dr. Ghilino Luis Antonio</InfoTitle>
-          <InfoText>
-            - Médico Traumatólogo con más de 25 Años de experiencia.
-          </InfoText>
-          <InfoText>- Graduado en la Universidad de Buenos Aires.</InfoText>
-          <InfoText>- Colegiado Distrito IV del Colegio de Médicos.</InfoText>
-          <InfoText>
-            - Ex-Miembro del Servicio de Ortopedia y Trumatología del hospital
-            Castex, San Martin.
-          </InfoText>
-          <InfoText>- Matrícula Provincial: 445565</InfoText>
+          <div>
+            <InfoText>Médico Traumatólogo con más de 25 Años de experiencia</InfoText>
+            <InfoText>Graduado en la Universidad de Buenos Aires</InfoText>
+            <InfoText>Colegiado Distrito IV del Colegio de Médicos</InfoText>
+            <InfoText>Ex-Miembro del Servicio de Ortopedia y Trumatología del hospital Castex, San Martin</InfoText>
+          </div>
+          <InfoText
+            css={css`
+            text-align: center;
+            color: var(--primary);
+            `}
+          >Matrícula Provincial: 445565</InfoText>
         </InfoTextContainer>
       </InfoItems>
     </InfoContainer>
