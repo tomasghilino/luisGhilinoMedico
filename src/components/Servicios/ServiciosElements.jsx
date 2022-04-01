@@ -11,4 +11,5 @@ export const ServiciosContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  overflow: hidden;
 `

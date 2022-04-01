@@ -9,16 +9,20 @@ import {
   ContactoMapContainer,
 } from "./ContactoElements"
 
+import Animation from "../ui/Animation"
+
 const Contacto = () => {
   return (
-    <ContactoContainer id="contacto">
-      <ContactoFormContainer>
-        <Formulario />
-      </ContactoFormContainer>
-      <ContactoMapContainer>
-        <Map />
-      </ContactoMapContainer>
-    </ContactoContainer>
+    <Animation>
+      <ContactoContainer id="contacto">
+        <ContactoFormContainer>
+          <Formulario />
+        </ContactoFormContainer>
+        <ContactoMapContainer>
+          <Map />
+        </ContactoMapContainer>
+      </ContactoContainer>
+    </Animation>
   )
 }
 
