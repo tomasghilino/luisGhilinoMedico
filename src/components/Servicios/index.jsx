@@ -5,7 +5,7 @@ import { ServiciosTitle, ServiciosContainer } from "./ServiciosElements"
 
 const Servicios = () => {
   return (
-    <>
+    <div id="patologias">
       <ServiciosTitle>Patologías</ServiciosTitle>
       <ServiciosContainer>
         <Card
@@ -51,7 +51,7 @@ const Servicios = () => {
           }
         />
       </ServiciosContainer>
-    </>
+    </div>
   )
 }
 

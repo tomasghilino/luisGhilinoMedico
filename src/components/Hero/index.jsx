@@ -15,7 +15,7 @@ const Hero = () => {
       <HeroContent>
         <HeroContentTitulo>
           <h1>Dr. Ghilino Luis Antonio</h1>
-          <p>Médico Traumatólogo - 20 años de experiencia</p>
+          <p>Médico Traumatólogo - 25 años de experiencia</p>
           <p>Diagnóstico y tratamiento de patologías crónicas</p>
         </HeroContentTitulo>
       </HeroContent>

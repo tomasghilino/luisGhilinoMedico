@@ -11,7 +11,14 @@ import {
 
 import { css } from "styled-components"
 
-import { FiMail, FiPhoneCall, FiCode, FiMapPin } from "react-icons/fi"
+import {
+  FiMail,
+  FiPhoneCall,
+  FiCode,
+  FiMapPin,
+  FiClock,
+  FiAlertCircle,
+} from "react-icons/fi"
 const Footer = () => {
   return (
     <FooterContainer>
@@ -52,21 +59,25 @@ const Footer = () => {
         <FooterTitle>Más Información</FooterTitle>
         <FooterDescription>
           <FooterItem>
-            <FiMail
+            <FiClock
               css={css`
                 flex-shrink: 0;
               `}
             />
-            <FooterItemText>traumatologoluis@gmail.com</FooterItemText>
+            <FooterItemText>
+              Martes de 9 a 12 hs (orden de llegada) en consultorio.
+            </FooterItemText>
           </FooterItem>
 
           <FooterItem>
-            <FiPhoneCall
+            <FiAlertCircle
               css={css`
                 flex-shrink: 0;
               `}
             />
-            <FooterItemText>011 4033-6567</FooterItemText>
+            <FooterItemText>
+              Valor de la consulta (en consultorio): $1400
+            </FooterItemText>
           </FooterItem>
           <FooterItem>
             <FiCode

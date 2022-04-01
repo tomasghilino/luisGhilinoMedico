@@ -18,8 +18,9 @@ export const FooterContainer = styled.div`
 
 export const FooterTitle = styled.h1`
   display: inline-block;
-  line-height: 1.4; // acomoda el border bottom
+  line-height: 1.8; // acomoda el border bottom
   border-bottom: 2px solid var(--primary);
+  font-size: 1.4rem;
 `
 
 export const FooterDescription = styled.div`

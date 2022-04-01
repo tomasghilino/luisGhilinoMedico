@@ -10,6 +10,8 @@ import {
   BarsIcon,
 } from "./NavbarElements"
 
+import { Link, animateScroll as scroll } from "react-scroll"
+
 const Navbar = () => {
   const [navbarColorChange, setNavbarChange] = useState(false)
   const [showNav, setShowNav] = useState(false)
@@ -31,10 +33,14 @@ const Navbar = () => {
     window.addEventListener("scroll", changeBackground)
   }, [])
 
+  const scrollToTop = () => {
+    scroll.scrollToTop()
+  }
+
   return (
     <Nav navbarChange={navbarColorChange}>
       <LogoContainer>
-        <Logo>
+        <Logo onClick={() => scrollToTop()}>
           <CruzIcon />
           Luis Ghilino
         </Logo>
@@ -43,19 +49,39 @@ const Navbar = () => {
       </LogoContainer>
 
       <div>
-        <NavContainer showNav={showNav} onClick={() => navToggle()}>
-          <NavOption>
-            <a href="#">Servicios</a>
-          </NavOption>
-          <NavOption>
-            <a href="#"> Operaciones</a>
-          </NavOption>
-          <NavOption>
-            <a href="#"> Precios </a>
-          </NavOption>
-          <NavOption>
-            <a href="#"> Contacto</a>
-          </NavOption>
+        <NavContainer showNav={showNav}>
+          <Link
+            onClick={() => navToggle()}
+            to="patologias"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            offset={-100}
+          >
+            <NavOption>Patologías</NavOption>
+          </Link>
+
+          <Link
+            onClick={() => navToggle()}
+            to="sobreMi"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            offset={-70}
+          >
+            <NavOption>Sobre Mi</NavOption>
+          </Link>
+
+          <Link
+            onClick={() => navToggle()}
+            to="contacto"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            offset={-70}
+          >
+            <NavOption>Contacto</NavOption>
+          </Link>
         </NavContainer>
       </div>
     </Nav>

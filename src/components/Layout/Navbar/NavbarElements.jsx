@@ -64,9 +64,10 @@ export const BarsIcon = styled(FaBars)`
   }
 `
 
-export const NavContainer = styled.ul`
+export const NavContainer = styled.div`
   list-style: none;
   display: flex;
+  align-items: center;
 
   margin: 0;
   padding: 0;
@@ -82,17 +83,15 @@ export const NavContainer = styled.ul`
   }
 `
 
-export const NavOption = styled.li`
+export const NavOption = styled.p`
   margin-right: 2rem;
   padding: 1rem;
   border-radius: 1.9rem;
   background-color: #ffffff;
+  width: max-content;
 
-  a {
-    text-decoration: none;
-    color: black;
-    font-weight: 700;
-  }
+  color: black;
+  font-weight: 700;
 
   transition: all 0.1s ease-in-out;
 
@@ -101,15 +100,15 @@ export const NavOption = styled.li`
     width: 100vw;
     border-radius: 0;
     text-align: center;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #0000003a;
   }
 
   &:hover {
     cursor: pointer;
     background-color: #0fd30f;
 
-    a {
-      // Texto
-      color: white;
-    }
+    // Texto
+    color: white;
   }
 `
