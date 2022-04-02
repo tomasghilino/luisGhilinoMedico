@@ -7,8 +7,7 @@ import {
   HeroContent,
   HeroContentTitulo,
 } from "./HeroElements"
-import videoHero from "../../../static/videoHero.webm"
-
+import videoHero from "../../media/videoHero.webm"
 import Animation from "../ui/Animation"
 
 const Hero = () => {
