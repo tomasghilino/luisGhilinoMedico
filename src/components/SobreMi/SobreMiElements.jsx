@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export const InfoContainer = styled.div`
   background-color: var(--black);
@@ -33,7 +34,7 @@ export const InfoItems = styled.div`
 export const InfoImgContainer = styled.div`
   flex: 1;
 `
-export const InfoImg = styled.img`
+export const InfoImg = styled(GatsbyImage)`
   max-height: 500px;
   object-fit: cover;
   width: 100%;

@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Dr. Luis Ghilino`,
+    description: `Médico Traumatólogo, 25 años de experiencia. San Miguel, Buenos Aires, Argentina.`,
+    author: `@ghilino-brumatti`,
+    keywords: `medico, traumatologo, san miguel, luis ghilino`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
@@ -13,7 +14,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `media`,
-        path: `${__dirname}/src`,
+        path: `${__dirname}/src/media/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -45,6 +46,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-react-leaflet`,
-    `gatsby-env-variables`
+    `gatsby-env-variables`,
   ],
 }

@@ -13,6 +13,8 @@ import {
 
 import Animation from "../ui/Animation"
 
+import useGetImageById from "../../hooks/useGetImageById"
+
 const SobreMi = () => {
   return (
     <InfoContainer id="sobreMi">
@@ -20,7 +22,10 @@ const SobreMi = () => {
       <Animation direction="left">
         <InfoItems>
           <InfoImgContainer>
-            <InfoImg src="/radiografia.jpg" alt="radiografia foto" />
+            <InfoImg
+              image={useGetImageById("bf962424-90ff-55c9-9394-c0ceee534b0d")}
+              alt="radiografia foto"
+            />
           </InfoImgContainer>
 
           <InfoTextContainer>

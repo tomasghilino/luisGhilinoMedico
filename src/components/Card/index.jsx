@@ -8,11 +8,12 @@ import {
   CardDescription,
   CardText,
 } from "./CardElements"
-const Card = ({ title, src, alt, text }) => {
+
+const Card = ({ title, image, alt, text }) => {
   return (
     <CardContainer>
       <CardImageContainer>
-        <CardImage src={src} alt={alt} />
+        <CardImage image={image} alt={alt} />
       </CardImageContainer>
 
       <CardDescription>

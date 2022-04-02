@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import { GatsbyImage } from "gatsby-plugin-image"
+
 export const CardContainer = styled.div`
   display: flex;
   background-color: var(--darker);
@@ -34,7 +36,7 @@ export const CardTitle = styled.h1`
 
   @media (max-width: 575px) {
     font-size: 1.2rem;
-    margin: 1rem .5rem 0 0;
+    margin: 1rem 0.5rem 0 0;
   }
 `
 export const CardDescription = styled.div`
@@ -57,7 +59,7 @@ export const CardImageContainer = styled.div`
   flex-shrink: 0;
   flex-basis: 50%;
 `
-export const CardImage = styled.img`
+export const CardImage = styled(GatsbyImage)`
   display: block;
   width: 100%;
   height: 100%;
