@@ -1,7 +1,11 @@
 import React from "react"
 
-const error404 = () => {
-  return <h1>Error</h1>
+const NotFound = () => {
+  return (
+    <>
+      <h1>Error: Page not found</h1>
+    </>
+  )
 }
 
-export default error404
+export default NotFound

@@ -50,5 +50,6 @@ module.exports = {
     // `gatsby-plugin-offline`,
     `gatsby-plugin-react-leaflet`,
     `gatsby-env-variables`,
+    `gatsby-plugin-react-helmet-async`,
   ],
 }
