@@ -4,12 +4,10 @@ import Seo from "../components/Seo.js"
 
 const NotFound = () => {
   return (
-    <>
+    <Layout>
       <Seo />
-      <Layout>
-        <h1>Error: Page not found</h1>
-      </Layout>
-    </>
+      <h1>Error: Page not found</h1>
+    </Layout>
   )
 }
 

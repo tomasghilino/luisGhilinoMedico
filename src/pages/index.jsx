@@ -9,15 +9,13 @@ import Seo from "../components/Seo.js"
 
 const App = () => {
   return (
-    <>
+    <Layout id="inicio">
       <Seo />
-      <Layout id="inicio">
-        <Hero />
-        <Servicios />
-        <SobreMi />
-        <Contacto />
-      </Layout>
-    </>
+      <Hero />
+      <Servicios />
+      <SobreMi />
+      <Contacto />
+    </Layout>
   )
 }
 
