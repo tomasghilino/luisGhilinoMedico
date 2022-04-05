@@ -38,7 +38,7 @@ const Servicios = () => {
             title={"Infiltraciones"}
             image={useGetImageById("85bb90a7-f3e2-58ea-b55b-350e5ecfdd93")}
             alt={"infiltracion rodilla"}
-            text={"Todo tipo de infiltraciones."}
+            text={"Infiltraciones de rodilla con ácido hialurónico."}
           />
           <Card
             title={"Inmovilizaciones con yeso"}
