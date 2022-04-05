@@ -25,7 +25,12 @@ const Seo = ({ title, description }) => {
     description: description || defaultDescription,
   }
   return (
-    <Helmet title={seo.title}>
+    <Helmet
+      title={seo.title}
+      htmlAttributes={{
+        lang: "es",
+      }}
+    >
       <meta name="description" content={seo.description} />
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (

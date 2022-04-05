@@ -8,9 +8,10 @@ import {
   Logo,
   CruzIcon,
   BarsIcon,
+  NavLink,
 } from "./NavbarElements"
 
-import { Link, animateScroll as scroll } from "react-scroll"
+import { animateScroll as scroll } from "react-scroll"
 
 const Navbar = () => {
   const [navbarColorChange, setNavbarChange] = useState(false)
@@ -50,38 +51,41 @@ const Navbar = () => {
 
       <div>
         <NavContainer showNav={showNav}>
-          <Link
+          <NavLink
             onClick={() => navToggle()}
             to="patologias"
             smooth={true}
             duration={1000}
             spy={true}
             offset={-100}
+            href="/patologias"
           >
             <NavOption>Patologías</NavOption>
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             onClick={() => navToggle()}
             to="sobreMi"
             smooth={true}
             duration={1000}
             spy={true}
             offset={-70}
+            href="/sobreMi"
           >
             <NavOption>Sobre Mi</NavOption>
-          </Link>
+          </NavLink>
 
-          <Link
+          <NavLink
             onClick={() => navToggle()}
             to="contacto"
             smooth={true}
             duration={1000}
             spy={true}
             offset={-70}
+            href="/contacto"
           >
             <NavOption>Contacto</NavOption>
-          </Link>
+          </NavLink>
         </NavContainer>
       </div>
     </Nav>

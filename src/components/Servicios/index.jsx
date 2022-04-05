@@ -36,7 +36,7 @@ const Servicios = () => {
           />
           <Card
             title={"Infiltraciones"}
-            image={useGetImageById("c76a97fe-52b3-5082-936b-67824407c18d")}
+            image={useGetImageById("85bb90a7-f3e2-58ea-b55b-350e5ecfdd93")}
             alt={"infiltracion rodilla"}
             text={"Todo tipo de infiltraciones."}
           />
@@ -47,12 +47,10 @@ const Servicios = () => {
             text={"Inmovilizaciones de articulaciones con yeso."}
           />
           <Card
-            title={"Confección de plantillas para buena marcha"}
+            title={"Plantilla / Pie Plano"}
             image={useGetImageById("f45a60d1-4127-5eb6-a5a2-3c5c28d4bf97")}
             alt={"plantilla zuela"}
-            text={
-              "Confecciono plantillas de pie para que usted pueda corregir su pisada, y caminar mejor."
-            }
+            text={"Corrección del arco de pies."}
           />
         </ServiciosContainer>
       </Animation>

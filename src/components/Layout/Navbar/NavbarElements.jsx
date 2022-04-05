@@ -3,6 +3,8 @@ import styled from "styled-components"
 import { GiHealthNormal } from "react-icons/gi"
 import { FaBars } from "react-icons/fa"
 
+import { Link } from "react-scroll"
+
 export const Nav = styled.nav`
   font-size: 1.1rem;
   position: fixed;
@@ -110,5 +112,13 @@ export const NavOption = styled.p`
 
     // Texto
     color: white;
+  }
+`
+
+export const NavLink = styled(Link)`
+  text-decoration: none;
+
+  &::visited {
+    text-decoration: none;
   }
 `
