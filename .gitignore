@@ -45,6 +45,7 @@ typings/
 #next files
 .next
 build
+out
 
 # Optional eslint cache
 .eslintcache
