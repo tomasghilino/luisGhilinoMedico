@@ -1,10 +1,14 @@
 import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
 
 export const InfoContainer = styled.div`
   background-color: var(--black);
   padding: 5rem;
   border-radius: 50px 50px 0 0;
+
+  box-shadow: 1px -9px 27px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px -9px 27px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px -9px 27px 0px rgba(0,0,0,0.75);
+
   @media (max-width: 564px) {
     flex-direction: column;
     font-size: 1.2rem;
@@ -33,13 +37,11 @@ export const InfoItems = styled.div`
 
 export const InfoImgContainer = styled.div`
   flex: 1;
-`
-export const InfoImg = styled(GatsbyImage)`
-  max-height: 500px;
-  object-fit: cover;
-  width: 100%;
-  border-radius: 1rem;
-  opacity: 0.9;
+  position: relative;
+
+  img{
+    border-radius: 1rem;
+  }
 `
 
 export const InfoTextContainer = styled.div`

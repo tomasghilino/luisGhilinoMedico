@@ -1,19 +1,18 @@
-import React from "react"
-import { css } from "styled-components"
+import React from "react";
+import { css } from "styled-components";
+import Image from 'next/image';
 
 import {
   InfoTitle,
   InfoContainer,
   InfoItems,
   InfoImgContainer,
-  InfoImg,
   InfoText,
   InfoTextContainer,
 } from "./SobreMiElements"
 
 import Animation from "../ui/Animation"
 
-import useGetImageById from "../../hooks/useGetImageById"
 
 const SobreMi = () => {
   return (
@@ -22,10 +21,14 @@ const SobreMi = () => {
       <Animation direction="left">
         <InfoItems>
           <InfoImgContainer>
-            <InfoImg
-              image={useGetImageById("bf962424-90ff-55c9-9394-c0ceee534b0d")}
+            <Image
+              src={'/images/radiografia.jpg'}
+              layout='responsive'
+              width={600}
+              height={600}
+              objectFit="cover"
               alt="radiografia foto"
-            />
+            /> 
           </InfoImgContainer>
 
           <InfoTextContainer>

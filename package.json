@@ -1,32 +1,19 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "luisghilino",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@emailjs/browser": "^3.5.0",
-    "babel-plugin-styled-components": "^2.0.6",
-    "deepmerge": "^4.2.2",
     "formik": "^2.2.9",
     "framer-motion": "^6.2.8",
-    "gatsby": "^4.11.1",
-    "gatsby-env-variables": "^2.0.0",
-    "gatsby-plugin-gatsby-cloud": "^4.11.1",
-    "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-image": "^2.11.1",
-    "gatsby-plugin-manifest": "^4.11.1",
-    "gatsby-plugin-offline": "^5.11.1",
-    "gatsby-plugin-react-helmet": "^5.11.0",
-    "gatsby-plugin-sharp": "^4.11.1",
-    "gatsby-plugin-styled-components": "^5.11.0",
-    "gatsby-source-filesystem": "^4.11.1",
-    "gatsby-transformer-sharp": "^4.11.0",
+    "next": "^12.1.4",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.8.1",
+    "babel-plugin-styled-components": "^2.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
     "react-intersection-observer": "^8.33.1",
     "react-scroll": "^1.8.6",
@@ -35,26 +22,14 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "eslint": "8.9.0",
+    "eslint-config-next": "12.1.0",
     "prettier": "^2.6.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   }
 }

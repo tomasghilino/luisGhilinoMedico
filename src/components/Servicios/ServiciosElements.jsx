@@ -8,8 +8,15 @@ export const ServiciosTitle = styled.h1`
 `
 
 export const ServiciosContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 2rem 4rem;
+
+  @media (max-width: 1380px){
+    padding: 2rem 1rem;
+  }
+
+  @media (max-width: 1024px){
+    grid-template-columns: 100%;
+  }
 `

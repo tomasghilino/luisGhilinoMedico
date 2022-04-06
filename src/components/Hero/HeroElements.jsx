@@ -6,6 +6,9 @@ export const HeroContainer = styled.div`
     width: 100%;
     overflow: hidden;
 
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
 `;
 
 export const BackgroundVideo = styled.video`

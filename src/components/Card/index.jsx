@@ -1,10 +1,11 @@
-import React from "react"
+import React from "react";
+
+import Image from 'next/image';
 
 import {
   CardContainer,
   CardTitle,
   CardImageContainer,
-  CardImage,
   CardDescription,
   CardText,
 } from "./CardElements"
@@ -13,7 +14,7 @@ const Card = ({ title, image, alt, text }) => {
   return (
     <CardContainer>
       <CardImageContainer>
-        <CardImage image={image} alt={alt} />
+        <Image src={image} alt={alt} width={200} height={200} layout='responsive' objectFit="cover"/>
       </CardImageContainer>
 
       <CardDescription>

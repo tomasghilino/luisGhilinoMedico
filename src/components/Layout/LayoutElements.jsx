@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         --brighter: #D4F1F4;
         --white: #eff6f7;
         --black: #010c11;
-        --gray : #f1f1f1;
+        --gray : #d6d6d6;
     }
 
     /* apply a natural box layout model to all elements, but allowing components to change */

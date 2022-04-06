@@ -7,7 +7,7 @@ import {
   HeroContent,
   HeroContentTitulo,
 } from "./HeroElements"
-import videoHero from "../../media/videoHero.webm"
+
 import Animation from "../ui/Animation"
 
 const Hero = () => {
@@ -24,7 +24,7 @@ const Hero = () => {
       </HeroContent>
 
       <BackgroundVideo muted loop autoPlay>
-        <source src={videoHero} type="video/webm"></source>
+        <source src="/images/videoHero.webm" type="video/webm"></source>
       </BackgroundVideo>
     </HeroContainer>
   )
