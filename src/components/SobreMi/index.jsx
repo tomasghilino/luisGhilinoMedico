@@ -1,6 +1,6 @@
 import React from "react"
 import { css } from "styled-components"
-import Image from "next/image"
+import ExportedImage from "next-image-export-optimizer"
 
 import {
   InfoTitle,
@@ -20,7 +20,7 @@ const SobreMi = () => {
       <Animation direction="left">
         <InfoItems>
           <InfoImgContainer>
-            <Image
+            <ExportedImage
               src={"/images/radiografia.jpg"}
               layout="responsive"
               width={600}
