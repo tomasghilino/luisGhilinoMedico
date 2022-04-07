@@ -22,8 +22,26 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="es">
         <Head>
+          {/* SEO */}
+          <meta
+            name="description"
+            content="Médico Traumatólogo, 25 años de experiencia. Graduado U.B.A, Buenos Aires, Argentina."
+          />
+          <meta
+            name="keywords"
+            content="medico, traumatologo, luis ghilino, traumatologo san miguel, medico bella vista, traumatologo bella vista, cirujano bella vista, cirujano san miguel, dr ghilino, dolor de huesos"
+          />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://www.drluisghilino.com" />
+          <meta property="og:title" content="Dr. Luis Ghilino" />
+          <meta
+            property="og:description"
+            content="Médico Traumatólogo, 25 años de experiencia. Graduado U.B.A, Buenos Aires, Argentina."
+          />
+
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -31,7 +49,10 @@ export default class MyDocument extends Document {
             referrerPolicy="no-referrer"
             crossOrigin="anonymous"
           />
-          <meta name="google-site-verification" content="63h5ERvL-w0Y9THg94TsVF5DfpBOfmnbL7NWbPTqQtQ" />
+          <meta
+            name="google-site-verification"
+            content="63h5ERvL-w0Y9THg94TsVF5DfpBOfmnbL7NWbPTqQtQ"
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"

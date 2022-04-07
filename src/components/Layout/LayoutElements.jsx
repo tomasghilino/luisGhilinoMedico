@@ -57,4 +57,9 @@ export const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar-thumb:hover {
     background: var(--darker);
     }
+
+    // opera detach button
+    #detach-button-host {
+    display: none !important;
+}
 `
