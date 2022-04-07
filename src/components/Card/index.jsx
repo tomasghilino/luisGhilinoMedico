@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-import Image from 'next/image';
+import ExportedImage from "next-image-export-optimizer"
 
 import {
   CardContainer,
@@ -14,7 +14,14 @@ const Card = ({ title, image, alt, text }) => {
   return (
     <CardContainer>
       <CardImageContainer>
-        <Image src={image} alt={alt} width={200} height={200} layout='responsive' objectFit="cover"/>
+        <ExportedImage
+          src={image}
+          alt={alt}
+          width={200}
+          height={200}
+          layout="responsive"
+          objectFit="cover"
+        />
       </CardImageContainer>
 
       <CardDescription>

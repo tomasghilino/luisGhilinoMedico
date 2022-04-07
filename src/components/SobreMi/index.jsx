@@ -1,6 +1,6 @@
-import React from "react";
-import { css } from "styled-components";
-import Image from 'next/image';
+import React from "react"
+import { css } from "styled-components"
+import ExportedImage from "next-image-export-optimizer"
 
 import {
   InfoTitle,
@@ -13,7 +13,6 @@ import {
 
 import Animation from "../ui/Animation"
 
-
 const SobreMi = () => {
   return (
     <InfoContainer id="sobreMi">
@@ -21,18 +20,18 @@ const SobreMi = () => {
       <Animation direction="left">
         <InfoItems>
           <InfoImgContainer>
-            <Image
-              src={'/images/radiografia.jpg'}
-              layout='responsive'
+            <ExportedImage
+              src={"/images/radiografia.jpg"}
+              layout="responsive"
               width={600}
               height={600}
               objectFit="cover"
               alt="radiografia foto"
-            /> 
+            />
           </InfoImgContainer>
 
           <InfoTextContainer>
-            <InfoTitle>Dr. Ghilino Luis Antonio</InfoTitle>
+            <InfoTitle>Dr. Ghilino Luis A. </InfoTitle>
             <div>
               <InfoText>
                 Médico Traumatólogo con más de 25 Años de experiencia

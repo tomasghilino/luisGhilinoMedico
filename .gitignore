@@ -45,6 +45,10 @@ typings/
 #next files
 .next
 build
+out
+
+#optimized images
+public/images/nextImageExportOptimizer
 
 # Optional eslint cache
 .eslintcache

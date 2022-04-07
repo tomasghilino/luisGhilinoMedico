@@ -1,23 +1,23 @@
 // pages/_document.js
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document"
 // Import styled components ServerStyleSheet
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet } from "styled-components"
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     // Step 1: Create an instance of ServerStyleSheet
-    const sheet = new ServerStyleSheet();
+    const sheet = new ServerStyleSheet()
 
     // Step 2: Retrieve styles from components in the page
     const page = renderPage(
-      (App) => (props) => sheet.collectStyles(<App {...props} />)
-    );
+      App => props => sheet.collectStyles(<App {...props} />)
+    )
 
     // Step 3: Extract the styles as <style> tags
-    const styleTags = sheet.getStyleElement();
+    const styleTags = sheet.getStyleElement()
 
     // Step 4: Pass styleTags as a prop
-    return { ...page, styleTags };
+    return { ...page, styleTags }
   }
 
   render() {
@@ -42,7 +42,11 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
             rel="stylesheet"
           />
-          <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet"/>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap"
+            rel="stylesheet"
+          />
+          <link rel="shortcut icon" href="/images/logo.png" />
           {this.props.styleTags}
         </Head>
 
@@ -51,6 +55,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
