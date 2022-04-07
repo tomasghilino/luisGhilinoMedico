@@ -69,7 +69,7 @@ const Footer = () => {
             </FooterItemText>
           </FooterItem>
 
-          <FooterItem>
+          {/* <FooterItem>
             <FiAlertCircle
               css={css`
                 flex-shrink: 0;
@@ -78,7 +78,7 @@ const Footer = () => {
             <FooterItemText>
               Valor de la consulta (en consultorio): $1400
             </FooterItemText>
-          </FooterItem>
+          </FooterItem> */}
           <FooterItem>
             <FiCode
               css={css`
