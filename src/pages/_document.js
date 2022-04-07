@@ -31,6 +31,7 @@ export default class MyDocument extends Document {
             referrerPolicy="no-referrer"
             crossOrigin="anonymous"
           />
+          <meta name="google-site-verification" content="63h5ERvL-w0Y9THg94TsVF5DfpBOfmnbL7NWbPTqQtQ" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
