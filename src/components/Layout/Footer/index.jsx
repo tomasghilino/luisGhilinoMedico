@@ -31,7 +31,7 @@ const Footer = () => {
                 flex-shrink: 0; // icons gets smaller on responsive, this style code prevents it
               `}
             />
-            <FooterItemText>traumatologoluis@gmail.com</FooterItemText>
+            <FooterItemText>doctorghilino@gmail.com</FooterItemText>
           </FooterItem>
 
           <FooterItem>
@@ -53,6 +53,17 @@ const Footer = () => {
               Maestro Ángel D'Elía 1367, San Miguel, Provincia de Buenos Aires
             </FooterItemText>
           </FooterItem>
+          <FooterItem>
+            <FiMapPin
+              css={css`
+                flex-shrink: 0;
+              `}
+            />
+            <FooterItemText>
+              Gral Teniente Ricchieri 426, Bella Vista, Provincia de Buenos
+              Aires
+            </FooterItemText>
+          </FooterItem>
         </FooterDescription>
       </div>
       <div>
@@ -65,7 +76,17 @@ const Footer = () => {
               `}
             />
             <FooterItemText>
-              Martes de 9 a 12 hs (orden de llegada) en consultorio.
+              Martes de 9 a 12 hs (orden de llegada) en consultorio. (D'Elía)
+            </FooterItemText>
+          </FooterItem>
+          <FooterItem>
+            <FiClock
+              css={css`
+                flex-shrink: 0;
+              `}
+            />
+            <FooterItemText>
+              Martes a partir de las 18. (Ricchieri)
             </FooterItemText>
           </FooterItem>
 
