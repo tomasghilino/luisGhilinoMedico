@@ -31,7 +31,7 @@
   "license": "0BSD",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && npx next-image-export-optimizer",
+    "build": "next build ",
     "start": "next start"
   }
 }
