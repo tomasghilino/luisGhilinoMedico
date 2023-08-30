@@ -76,7 +76,8 @@ const Footer = () => {
               `}
             />
             <FooterItemText>
-              Martes de 9 a 12 hs (orden de llegada) en consultorio. (D'Elía)
+              San Isidro - Calle Martin y Omar 330 (Sábado 10hs a 12hs). (Activo
+              a partir del 9 de septiembre de 2023)
             </FooterItemText>
           </FooterItem>
           <FooterItem>
@@ -86,7 +87,18 @@ const Footer = () => {
               `}
             />
             <FooterItemText>
-              Martes a partir de las 18. (Ricchieri)
+              San Miguel - Calle D'elia 1367 - Martes de 10 a 12 hs (orden de
+              llegada).
+            </FooterItemText>
+          </FooterItem>
+          <FooterItem>
+            <FiClock
+              css={css`
+                flex-shrink: 0;
+              `}
+            />
+            <FooterItemText>
+              Bella Vista - Calle AV. Ricchieri 428 - Martes a partir de las 18.
             </FooterItemText>
           </FooterItem>
 
