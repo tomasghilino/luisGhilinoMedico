@@ -76,17 +76,6 @@ const Footer = () => {
               `}
             />
             <FooterItemText>
-              San Isidro - Calle Martin y Omar 330 (Sábado 10hs a 12hs). (Activo
-              a partir del 9 de septiembre de 2023)
-            </FooterItemText>
-          </FooterItem>
-          <FooterItem>
-            <FiClock
-              css={css`
-                flex-shrink: 0;
-              `}
-            />
-            <FooterItemText>
               San Miguel - Calle D'elia 1367 - Martes de 10 a 12 hs (orden de
               llegada).
             </FooterItemText>
