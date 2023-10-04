@@ -76,7 +76,7 @@ const Footer = () => {
               `}
             />
             <FooterItemText>
-              San Miguel - Calle D'elia 1367 - Martes de 10 a 12 hs (orden de
+              San Miguel - Calle D'elia 1367 - Martes de 10 a 11.30 hs (orden de
               llegada).
             </FooterItemText>
           </FooterItem>
