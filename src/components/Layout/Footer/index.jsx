@@ -11,14 +11,7 @@ import {
 
 import { css } from "styled-components"
 
-import {
-  FiMail,
-  FiPhoneCall,
-  FiCode,
-  FiMapPin,
-  FiClock,
-  FiAlertCircle,
-} from "react-icons/fi"
+import { FiMail, FiPhoneCall, FiCode, FiMapPin, FiClock } from "react-icons/fi"
 const Footer = () => {
   return (
     <FooterContainer>
@@ -42,35 +35,13 @@ const Footer = () => {
             />
             <FooterItemText>011 4033-6567</FooterItemText>
           </FooterItem>
-
-          <FooterItem>
-            <FiMapPin
-              css={css`
-                flex-shrink: 0;
-              `}
-            />
-            <FooterItemText>
-              Maestro Ángel D'Elía 1367, San Miguel, Provincia de Buenos Aires
-            </FooterItemText>
-          </FooterItem>
-          <FooterItem>
-            <FiMapPin
-              css={css`
-                flex-shrink: 0;
-              `}
-            />
-            <FooterItemText>
-              Gral Teniente Ricchieri 426, Bella Vista, Provincia de Buenos
-              Aires
-            </FooterItemText>
-          </FooterItem>
         </FooterDescription>
       </div>
       <div>
         <FooterTitle>Más Información</FooterTitle>
         <FooterDescription>
           <FooterItem>
-            <FiClock
+            <FiMapPin
               css={css`
                 flex-shrink: 0;
               `}
@@ -81,13 +52,24 @@ const Footer = () => {
             </FooterItemText>
           </FooterItem>
           <FooterItem>
-            <FiClock
+            <FiMapPin
               css={css`
                 flex-shrink: 0;
               `}
             />
             <FooterItemText>
-              Bella Vista - Calle AV. Ricchieri 428 - Martes a partir de las 18.
+              Bella Vista - Calle AV. Ricchieri 428 - Martes a partir de las
+              18hs.
+            </FooterItemText>
+          </FooterItem>
+          <FooterItem>
+            <FiMapPin
+              css={css`
+                flex-shrink: 0;
+              `}
+            />
+            <FooterItemText>
+              General Pacheco - Calle Av Irigoyen 850 - Miércoles a partir 18hs.
             </FooterItemText>
           </FooterItem>
 
