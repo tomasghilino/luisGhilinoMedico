@@ -61,6 +61,16 @@ const Footer = () => {
                San Isidro - Calle Avellaneda 144 - Lunes 17 a 20 hs
             </FooterItemText>
           </FooterItem>
+           <FooterItem>
+            <FiMapPin
+              css={css`
+                flex-shrink: 0;
+              `}
+            />
+            <FooterItemText>
+               Bella Vista - Calle AV. Ricchieri 428 - Martes a partir de las 18.
+            </FooterItemText>
+          </FooterItem>
 
           {/* <FooterItem>
             <FiAlertCircle
