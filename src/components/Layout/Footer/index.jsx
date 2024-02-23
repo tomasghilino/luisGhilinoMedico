@@ -58,27 +58,6 @@ const Footer = () => {
               `}
             />
             <FooterItemText>
-              Bella Vista - Calle AV. Ricchieri 428 - Martes a partir de las
-              18hs.
-            </FooterItemText>
-          </FooterItem>
-          <FooterItem>
-            <FiMapPin
-              css={css`
-                flex-shrink: 0;
-              `}
-            />
-            <FooterItemText>
-              General Pacheco - Calle Av Irigoyen 850 - Miércoles a partir 18hs.
-            </FooterItemText>
-          </FooterItem>
-          <FooterItem>
-            <FiMapPin
-              css={css`
-                flex-shrink: 0;
-              `}
-            />
-            <FooterItemText>
                San Isidro - Calle Avellaneda 144 - Lunes 17 a 20 hs
             </FooterItemText>
           </FooterItem>
