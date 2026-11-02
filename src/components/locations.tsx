@@ -1,3 +1,5 @@
+import { cityList, doctor } from "@/content/site"
+
 import { SectionHeading } from "./section-heading"
 import { LocationsPicker } from "./locations-picker"
 
@@ -12,8 +14,8 @@ export function Locations() {
         <SectionHeading
           id="consultorios-titulo"
           eyebrow="Consultorios"
-          title="Tres consultorios, días y horarios"
-          intro="Elegí el consultorio que te quede más cerca. En San Miguel se atiende por orden de llegada."
+          title="Dónde y cuándo atiende"
+          intro={`${doctor.practice} en ${cityList}. En San Miguel se atiende sin turno, por orden de llegada; en Boulogne, confirmá la consulta por WhatsApp antes de ir.`}
         />
         <LocationsPicker />
       </div>

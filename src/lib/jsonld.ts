@@ -9,11 +9,13 @@ import type {
 } from "schema-dts"
 
 import {
+  consultationFee,
   contact,
   doctor,
   faqs,
   locations,
   pathologies,
+  scheduleText,
   site,
 } from "@/content/site"
 
@@ -25,8 +27,6 @@ const ids = {
   faq: `${site.url}/#preguntas`,
   office: (id: string) => `${site.url}/#consultorio-${id}`,
 }
-
-const sanMiguelGeo = { latitude: -34.5427766, longitude: -58.7101823 }
 
 const credential = {
   "@type": "EducationalOccupationalCredential",
@@ -42,12 +42,13 @@ export function buildJsonLd() {
   const offices: PhysiciansOffice[] = locations.map(location => ({
     "@type": "PhysiciansOffice",
     "@id": ids.office(location.id),
-    name: `Consultorio ${location.city} · ${doctor.displayName}`,
-    description: [location.schedule, location.note].filter(Boolean).join(". "),
+    name: `${doctor.practice} · ${doctor.displayName} · ${location.city}`,
+    description: `${scheduleText(location)}. ${location.note}.`,
     url: `${site.url}/#consultorios`,
     telephone: contact.phoneE164,
     email: contact.email,
     medicalSpecialty: "Musculoskeletal",
+    priceRange: consultationFee,
     address: {
       "@type": "PostalAddress",
       streetAddress: location.street,
@@ -56,15 +57,13 @@ export function buildJsonLd() {
       postalCode: location.postalCode,
       addressCountry: "AR",
     },
-    ...(location.id === "san-miguel"
-      ? { geo: { "@type": "GeoCoordinates", ...sanMiguelGeo } }
-      : {}),
-    openingHoursSpecification: {
+    geo: { "@type": "GeoCoordinates", ...location.geo },
+    openingHoursSpecification: location.slots.map(slot => ({
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: `https://schema.org/${location.dayOfWeek}`,
-      opens: location.opens,
-      ...(location.closes ? { closes: location.closes } : {}),
-    },
+      dayOfWeek: slot.days.map(day => `https://schema.org/${day}` as const),
+      opens: slot.opens,
+      ...(slot.closes ? { closes: slot.closes } : {}),
+    })),
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.mapsQuery)}`,
   }))
 
@@ -73,14 +72,18 @@ export function buildJsonLd() {
     "@id": ids.physician,
     name: `Dr. ${doctor.fullName}`,
     alternateName: [doctor.displayName, "Dr. Ghilino Luis Antonio"],
-    description: `${doctor.specialty}. ${doctor.experience}. ${doctor.focus}. Graduado en la ${doctor.university}. Matrícula Provincial ${doctor.license}.`,
+    description: `${doctor.specialty}. ${doctor.practice}. ${doctor.experience}. ${doctor.focus}. Graduado en la ${doctor.university}. Fue integrante del ${doctor.pastServices.join(" y del ")}. Matrícula Provincial ${doctor.license}.`,
     url: site.url,
     image: `${site.url}/opengraph-image`,
     telephone: contact.phoneE164,
     email: contact.email,
     medicalSpecialty: "Musculoskeletal",
     practicesAt: locations.map(l => ({ "@id": ids.office(l.id) })),
-    areaServed: locations.map(l => ({ "@type": "City", name: l.city })),
+    areaServed: locations.flatMap(l =>
+      [l.city, l.district]
+        .filter(name => name !== undefined)
+        .map(name => ({ "@type": "City" as const, name })),
+    ),
     knowsAbout: pathologies.map(p => p.title),
     availableService: [
       {

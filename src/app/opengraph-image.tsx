@@ -3,9 +3,9 @@ import { join } from "node:path"
 
 import { ImageResponse } from "next/og"
 
-import { doctor, locations } from "@/content/site"
+import { cityList, doctor, locations } from "@/content/site"
 
-export const alt = `${doctor.displayName}, ${doctor.specialty.toLowerCase()} en ${locations.map(l => l.city).join(", ")}`
+export const alt = `${doctor.displayName}, ${doctor.specialty.toLowerCase()} en ${cityList}`
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 

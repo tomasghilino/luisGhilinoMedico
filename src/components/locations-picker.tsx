@@ -3,8 +3,10 @@
 import { Clock, MapPin, Navigation } from "lucide-react"
 import { useState } from "react"
 
-import { locations } from "@/content/site"
-import { directionsUrl, mapEmbedUrl } from "@/lib/links"
+import { locations, placeName, scheduleDays } from "@/content/site"
+import { directionsUrl, mapEmbedUrl, whatsappUrl } from "@/lib/links"
+
+import { WhatsAppIcon } from "./icons"
 
 export function LocationsPicker() {
   const [selectedId, setSelectedId] = useState(locations[0].id)
@@ -33,8 +35,8 @@ export function LocationsPicker() {
                   >
                     {location.city}
                   </h3>
-                  <span className="rounded-full bg-navy px-3 py-1 text-xs font-semibold text-white">
-                    {location.dayLabel}
+                  <span className="mt-1 rounded-full bg-navy px-3 py-1 text-right text-xs font-semibold text-white">
+                    {scheduleDays(location)}
                   </span>
                 </div>
                 <address className="mt-4 space-y-2 not-italic">
@@ -43,21 +45,25 @@ export function LocationsPicker() {
                       className="size-4 shrink-0 text-teal-strong"
                       aria-hidden="true"
                     />
-                    {location.street}, {location.city}
+                    {location.street}, {placeName(location)}
                   </p>
-                  <p className="flex items-center gap-2.5 text-ink">
+                  <div className="flex items-start gap-2.5 text-ink">
                     <Clock
-                      className="size-4 shrink-0 text-teal-strong"
+                      className="mt-1 size-4 shrink-0 text-teal-strong"
                       aria-hidden="true"
                     />
-                    {location.schedule}
-                  </p>
+                    <ul>
+                      {location.slots.map(slot => (
+                        <li key={slot.label}>
+                          {slot.label} {slot.hours}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </address>
-                {location.note && (
-                  <p className="mt-3 text-sm font-medium text-teal-strong">
-                    {location.note}
-                  </p>
-                )}
+                <p className="mt-3 text-sm font-medium text-teal-strong">
+                  {location.note}.
+                </p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   <button
                     type="button"
@@ -84,6 +90,20 @@ export function LocationsPicker() {
                       a {location.city} (abre Google Maps)
                     </span>
                   </a>
+                  {location.confirmByWhatsApp && (
+                    <a
+                      href={whatsappUrl(
+                        `Hola Dr. Ghilino, quisiera confirmar una consulta en ${location.city}.`,
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold text-teal-strong hover:bg-mist"
+                    >
+                      <WhatsAppIcon className="size-4" />
+                      Confirmar por WhatsApp
+                      <span className="sr-only"> (abre WhatsApp)</span>
+                    </a>
+                  )}
                 </div>
               </article>
             </li>

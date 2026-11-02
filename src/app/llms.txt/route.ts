@@ -1,10 +1,14 @@
 import {
+  cityList,
+  consultationFee,
   contact,
   doctor,
   faqs,
   locations,
   nav,
   pathologies,
+  placeName,
+  scheduleText,
   site,
 } from "@/content/site"
 import { whatsappUrl } from "@/lib/links"
@@ -18,20 +22,21 @@ const mapsSearch = (query: string) =>
 export function GET() {
   const body = `# ${doctor.displayName}
 
-> ${doctor.specialty} en San Miguel, San Isidro y Bella Vista (Provincia de Buenos Aires, Argentina). ${doctor.experience}. ${doctor.focus}.
+> ${doctor.specialty}. ${doctor.practice} en ${cityList} (Provincia de Buenos Aires, Argentina). ${doctor.experience}. ${doctor.focus}.
 
 - Nombre completo: Dr. ${doctor.fullName}
 - Matrícula Provincial: ${doctor.license}
 - Formación: graduado en la ${doctor.university}
 - Colegiación: ${doctor.college}
-- Trayectoria: ex miembro del Servicio de Ortopedia y Traumatología del ${doctor.hospital}
+- Trayectoria: ex integrante del ${doctor.pastServices.join(" y del ")}
+- Valor de la consulta: ${consultationFee}
 
 ## Consultorios y horarios
 
 ${locations
   .map(
     l =>
-      `- [${l.city}](${mapsSearch(l.mapsQuery)}): ${l.street}. ${l.schedule}.${l.note ? ` ${l.note}.` : ""}`,
+      `- [${placeName(l)}](${mapsSearch(l.mapsQuery)}): ${l.street}. ${scheduleText(l)}. ${l.note}.`,
   )
   .join("\n")}
 

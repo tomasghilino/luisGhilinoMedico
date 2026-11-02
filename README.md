@@ -1,6 +1,6 @@
 # Dr. Luis Ghilino · Médico traumatólogo
 
-Sitio del Dr. Luis Antonio Ghilino: consultorios en San Miguel, San Isidro y Bella Vista.
+Sitio del Dr. Luis Antonio Ghilino: consultorio privado de Ortopedia y Traumatología en San Miguel y Boulogne (San Isidro).
 
 En producción: https://drluisghilino.vercel.app (Vercel publica cada push a `master`).
 
@@ -25,13 +25,13 @@ Hace falta Node 24.
 
 ## Dónde cambiar cada cosa
 
-Todo el contenido está en `src/content/site.ts`: datos del médico, teléfono, mail, consultorios y horarios, patologías y preguntas frecuentes. La página, los datos estructurados (JSON-LD), `/llms.txt` y la imagen para redes salen de ese archivo. Si cambiás un horario ahí, se actualiza en todos lados.
+Todo el contenido está en `src/content/site.ts`: datos del médico, teléfono, mail, consultorios y horarios, valor de la consulta, patologías y preguntas frecuentes. La página, los datos estructurados (JSON-LD), `/llms.txt` y la imagen para redes salen de ese archivo. Si cambiás un horario ahí, se actualiza en todos lados.
 
 ## SEO y buscadores con IA
 
 - Título, descripción, canonical, Open Graph y Twitter en `src/app/layout.tsx`
 - Imagen para redes generada en `src/app/opengraph-image.tsx`
-- JSON-LD en `src/lib/jsonld.ts`: médico (`IndividualPhysician`), los tres consultorios (`PhysiciansOffice`) con dirección y horario, y las preguntas frecuentes (`FAQPage`)
+- JSON-LD en `src/lib/jsonld.ts`: médico (`IndividualPhysician`), los consultorios (`PhysiciansOffice`) con dirección, horarios y valor de la consulta, y las preguntas frecuentes (`FAQPage`)
 - `/sitemap.xml`, `/robots.txt` y `/llms.txt`
 - El formulario de contacto tiene atributos WebMCP para que los agentes de IA lo entiendan
 
