@@ -1,37 +1,37 @@
 {
-  "name": "luisghilino",
+  "name": "dr-luis-ghilino",
+  "version": "2.0.0",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "@emailjs/browser": "^3.5.0",
-    "babel-plugin-styled-components": "^2.0.6",
-    "formik": "^2.2.9",
-    "framer-motion": "^6.2.8",
-    "next": "^12.1.4",
-    "next-image-export-optimizer": "^0.8.0",
-    "normalize.css": "^8.0.1",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-intersection-observer": "^8.33.1",
-    "react-scroll": "^1.8.6",
-    "sharp": "^0.30.3",
-    "styled-components": "^5.3.5",
-    "webpack-merge": "^5.8.0",
-    "yup": "^0.32.11"
+  "description": "Sitio del Dr. Luis Antonio Ghilino, médico traumatólogo en San Miguel, San Isidro y Bella Vista.",
+  "type": "module",
+  "engines": {
+    "node": "24.x"
   },
-  "devDependencies": {
-    "eslint": "8.9.0",
-    "eslint-config-next": "12.1.0",
-    "prettier": "^2.6.2"
-  },
-  "license": "0BSD",
   "scripts": {
     "dev": "next dev",
-    "build": "next build ",
-    "start": "next start"
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "lucide-react": "^1.66.0",
+    "next": "^16.4.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^10.14.0",
+    "eslint-config-next": "^16.4.4",
+    "prettier": "^3.9.10",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "schema-dts": "^2.1.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3"
   }
 }
