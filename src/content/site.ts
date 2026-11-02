@@ -11,7 +11,7 @@ import yeso from "@/assets/images/yeso-inmovilizacion.jpg"
 
 export const site = {
   url: (
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://drluisghilino.vercel.app"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://drluisghilino.com.ar"
   ).replace(/\/$/, ""),
   name: "Dr. Luis Ghilino",
   locale: "es_AR",

@@ -2,7 +2,7 @@
 
 Sitio del Dr. Luis Antonio Ghilino: consultorios en San Miguel, San Isidro y Bella Vista.
 
-En producción: https://drluisghilino.vercel.app (Vercel publica cada push a `master`).
+En producción: https://drluisghilino.com.ar (Vercel publica cada push a `master`).
 
 ## Stack
 
@@ -37,7 +37,9 @@ Todo el contenido está en `src/content/site.ts`: datos del médico, teléfono, 
 
 ## Dominio
 
-La URL pública sale de `NEXT_PUBLIC_SITE_URL` (ver `.env.example`). Hoy es `https://drluisghilino.vercel.app`. Si se compra un dominio propio, hay que cargarlo como variable de entorno en Vercel; el canonical, el sitemap y el JSON-LD se actualizan solos.
+El sitio vive en `drluisghilino.com.ar`, registrado en NIC Argentina y delegado a los DNS de Vercel (`ns1.vercel-dns.com` y `ns2.vercel-dns.com`), así que los registros DNS se manejan desde Vercel. `www` y `drluisghilino.vercel.app` redirigen al dominio.
+
+La URL que usan el canonical, el sitemap, `/llms.txt` y el JSON-LD sale de `src/content/site.ts`. Se puede pisar con `NEXT_PUBLIC_SITE_URL` (ver `.env.example`).
 
 ## Formulario de contacto
 

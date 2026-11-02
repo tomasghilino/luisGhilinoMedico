@@ -6,9 +6,16 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
-  // Rutas que linkeaba el sitio anterior; las mandamos a su sección.
   async redirects() {
     return [
+      // La dirección de Vercel manda todo al dominio propio, así Google indexa una sola copia.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "drluisghilino.vercel.app" }],
+        destination: "https://drluisghilino.com.ar/:path*",
+        permanent: true,
+      },
+      // Rutas que linkeaba el sitio anterior; las mandamos a su sección.
       { source: "/patologias", destination: "/#patologias", permanent: true },
       { source: "/sobreMi", destination: "/#sobre-mi", permanent: true },
       { source: "/contacto", destination: "/#contacto", permanent: true },
