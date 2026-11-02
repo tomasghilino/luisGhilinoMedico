@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Paleta original del sitio (--primary, --secondary, --darker, --brighter,
+   --white, --black, --gray) más dos tonos derivados para texto accesible. */
+@theme {
+  --color-ink: #010c11;
+  --color-navy: #05445e;
+  --color-teal: #189ab4;
+  --color-teal-strong: #0f6a7d; /* el color del título "Patologías" del sitio anterior */
+  --color-aqua: #75e6da;
+  --color-mist: #d4f1f4;
+  --color-paper: #eff6f7;
+  --color-stone: #d6d6d6;
+  --color-muted: #3f5761;
+  --color-whatsapp: #25d366;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  [id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  ::selection {
+    background-color: var(--color-aqua);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-teal);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Entrada del hero al cargar la página. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.9s var(--ease-out-soft) both;
+  animation-delay: calc(var(--i, 0) * 110ms);
+}
+
+/* Aparición al hacer scroll, solo CSS: si el navegador no la soporta,
+   el contenido se ve igual (nunca queda oculto para buscadores). */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+/* Textura sutil tipo placa radiográfica para fondos oscuros. */
+.grain {
+  background-image: radial-gradient(
+    rgb(212 241 244 / 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
