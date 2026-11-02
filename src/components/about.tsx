@@ -11,6 +11,7 @@ const icons = {
   uba: GraduationCap,
   colegio: BadgeCheck,
   castex: Hospital,
+  "hospital-san-isidro": Hospital,
 } as const
 
 export function About() {

@@ -3,7 +3,7 @@
 import { ChevronDown, Mail } from "lucide-react"
 import { useId, useState } from "react"
 
-import { locations } from "@/content/site"
+import { locations, scheduleDays } from "@/content/site"
 import { mailtoUrl, whatsappUrl } from "@/lib/links"
 
 import { WhatsAppIcon } from "./icons"
@@ -128,7 +128,7 @@ export function ContactForm() {
               <option value="">Todavía no sé</option>
               {locations.map(location => (
                 <option key={location.id} value={location.city}>
-                  {location.city} · {location.schedule}
+                  {location.city} · {scheduleDays(location)}
                 </option>
               ))}
             </select>

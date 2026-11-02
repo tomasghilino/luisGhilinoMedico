@@ -1,4 +1,12 @@
-import { contact, credits, doctor, locations, nav } from "@/content/site"
+import {
+  contact,
+  credits,
+  doctor,
+  locations,
+  nav,
+  placeName,
+  scheduleText,
+} from "@/content/site"
 
 import { LogoMark } from "./icons"
 
@@ -16,7 +24,7 @@ export function Footer() {
             </p>
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-            {doctor.specialty}. {doctor.experience}. Matrícula Provincial{" "}
+            {doctor.practice}. {doctor.experience}. Matrícula Provincial{" "}
             {doctor.license}.
           </p>
           <p className="mt-6 max-w-xs text-xs leading-relaxed text-muted">
@@ -43,9 +51,9 @@ export function Footer() {
             {locations.map(location => (
               <li key={location.id} className="text-muted">
                 <span className="block font-medium text-ink">
-                  {location.city}
+                  {placeName(location)}
                 </span>
-                {location.street} · {location.schedule}
+                {location.street} · {scheduleText(location)}
               </li>
             ))}
           </ul>

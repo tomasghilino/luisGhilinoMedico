@@ -1,11 +1,10 @@
 import { ArrowRight, CalendarDays } from "lucide-react"
 
-import { doctor, locations } from "@/content/site"
+import { consultationFee, doctor, locations } from "@/content/site"
 import { whatsappUrl } from "@/lib/links"
 
 import { HeroVideo } from "./hero-video"
 import { WhatsAppIcon } from "./icons"
-import { scheduleHours } from "./schedule"
 
 export function Hero() {
   return (
@@ -27,7 +26,7 @@ export function Hero() {
               className="size-1.5 rounded-full bg-teal"
               aria-hidden="true"
             />
-            {doctor.specialty} · San Miguel · San Isidro · Bella Vista
+            {[doctor.field, ...locations.map(l => l.city)].join(" · ")}
           </p>
           <h1
             id="hero-titulo"
@@ -112,17 +111,27 @@ export function Hero() {
                       {location.street}
                     </span>
                   </span>
-                  <span className="shrink-0 text-right">
-                    <span className="block text-sm font-semibold text-navy">
-                      {location.dayLabel}
-                    </span>
-                    <span className="block text-sm text-muted">
-                      {scheduleHours(location.schedule, location.dayLabel)}
-                    </span>
+                  <span className="shrink-0 space-y-1.5 text-right">
+                    {location.slots.map(slot => (
+                      <span key={slot.label} className="block">
+                        <span className="block text-sm font-semibold text-navy">
+                          {slot.shortLabel}
+                        </span>
+                        <span className="block text-sm text-muted">
+                          {slot.hours}
+                        </span>
+                      </span>
+                    ))}
                   </span>
                 </li>
               ))}
             </ul>
+            <p className="mt-5 flex items-baseline justify-between gap-4 border-t border-navy/10 pt-4">
+              <span className="text-sm text-muted">Valor de la consulta</span>
+              <span className="font-display text-xl font-semibold text-navy tabular-nums">
+                {consultationFee}
+              </span>
+            </p>
           </div>
         </div>
       </div>
