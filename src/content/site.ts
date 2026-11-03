@@ -19,6 +19,7 @@ export const site = {
   description:
     "Consultorio de Ortopedia y Traumatología con más de 25 años de experiencia: artrosis, columna, reuma, infiltraciones de rodilla, yesos y pie plano. Atiende en San Miguel y Boulogne.",
   googleVerification: "63h5ERvL-w0Y9THg94TsVF5DfpBOfmnbL7NWbPTqQtQ",
+  googleAnalytics: "G-CP422LDH6D",
 }
 
 export const doctor = {
