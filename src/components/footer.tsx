@@ -28,7 +28,8 @@ export function Footer() {
             {doctor.license}.
           </p>
           <p className="mt-6 max-w-xs text-xs leading-relaxed text-muted">
-            La información de este sitio no reemplaza la consulta médica.
+            La información de este sitio no reemplaza la consulta médica. Usamos
+            Google Analytics para contar las visitas.
           </p>
         </div>
 

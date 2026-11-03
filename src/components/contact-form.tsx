@@ -4,6 +4,7 @@ import { ChevronDown, Mail } from "lucide-react"
 import { useId, useState } from "react"
 
 import { locations, scheduleDays } from "@/content/site"
+import { track } from "@/lib/analytics"
 import { mailtoUrl, whatsappUrl } from "@/lib/links"
 
 import { WhatsAppIcon } from "./icons"
@@ -55,6 +56,12 @@ export function ContactForm() {
       consultorio ? `Consultorio: ${consultorio}.` : "",
       `Motivo de la consulta: ${motivo.trim()}`,
     ].filter(Boolean)
+
+    // Solo la vía y el consultorio: ni el nombre ni el motivo salen del navegador.
+    track("formulario_enviado", {
+      via: via === "email" ? "correo" : "whatsapp",
+      consultorio: consultorio || "sin_elegir",
+    })
 
     if (via === "email") {
       window.location.href = mailtoUrl(

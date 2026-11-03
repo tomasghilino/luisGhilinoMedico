@@ -44,3 +44,17 @@ La URL que usan el canonical, el sitemap, `/llms.txt` y el JSON-LD sale de `src/
 ## Formulario de contacto
 
 No tiene servidor. Arma el mensaje y lo abre en WhatsApp o en el correo de la persona, que lo envía desde ahí. El sitio no guarda datos.
+
+## Estadísticas
+
+Google Analytics 4 (`G-CP422LDH6D`, en `src/content/site.ts`) se carga solo en producción, así que las previews y el desarrollo local no suman visitas. Además de las visitas, el sitio manda estos eventos (`src/components/analytics-events.tsx` y el formulario):
+
+| Evento               | Cuándo                             | Parámetros                               |
+| -------------------- | ---------------------------------- | ---------------------------------------- |
+| `clic_whatsapp`      | Clic en cualquier link de WhatsApp | `seccion`                                |
+| `clic_telefono`      | Clic en el teléfono                | `seccion`                                |
+| `clic_correo`        | Clic en el correo                  | `seccion`                                |
+| `clic_como_llegar`   | Clic en "Cómo llegar"              | `seccion`, `consultorio`                 |
+| `formulario_enviado` | Envío válido del formulario        | `via` (whatsapp o correo), `consultorio` |
+
+Nunca se mandan el nombre ni el motivo de la consulta.
