@@ -20,6 +20,9 @@ export const site = {
     "Consultorio de Ortopedia y Traumatología con más de 25 años de experiencia: artrosis, columna, reuma, infiltraciones de rodilla, yesos y pie plano. Atiende en San Miguel y Boulogne.",
   googleVerification: "63h5ERvL-w0Y9THg94TsVF5DfpBOfmnbL7NWbPTqQtQ",
   googleAnalytics: "G-CP422LDH6D",
+  // Asistente virtual (repo dr-ghilino-assistant): la función chat-api de InsForge sirve
+  // el script del chat y responde las preguntas. InsForge pasa la ruta en ?path=.
+  assistantApi: "https://c94k6z7z.us-east.insforge.app/functions/chat-api",
 }
 
 export const doctor = {
