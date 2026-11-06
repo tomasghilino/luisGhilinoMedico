@@ -1,18 +1,25 @@
 import Image from "next/image"
-import { Award, BadgeCheck, GraduationCap, Hospital } from "lucide-react"
+import {
+  Award,
+  BadgeCheck,
+  GraduationCap,
+  Hospital,
+  type LucideIcon,
+} from "lucide-react"
 
 import radiografia from "@/assets/images/radiografia.jpg"
-import { doctor } from "@/content/site"
+import { type CredentialId, doctor } from "@/content/site"
 
 import { SectionHeading } from "./section-heading"
 
-const icons = {
+// Una credencial nueva en site.ts sin su ícono acá no compila (antes rompía la página).
+const icons: Record<CredentialId, LucideIcon> = {
   experiencia: Award,
   uba: GraduationCap,
   colegio: BadgeCheck,
   castex: Hospital,
   "hospital-san-isidro": Hospital,
-} as const
+}
 
 export function About() {
   return (
@@ -52,7 +59,7 @@ export function About() {
           />
           <ul className="mt-10 divide-y divide-navy/10 border-y border-navy/10">
             {doctor.credentials.map(credential => {
-              const Icon = icons[credential.id as keyof typeof icons]
+              const Icon = icons[credential.id]
               return (
                 <li key={credential.id} className="flex gap-5 py-5">
                   <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-mist text-navy">

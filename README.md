@@ -35,6 +35,14 @@ Todo el contenido está en `src/content/site.ts`: datos del médico, teléfono, 
 - `/sitemap.xml`, `/robots.txt` y `/llms.txt`
 - El formulario de contacto tiene atributos WebMCP para que los agentes de IA lo entiendan
 
+## Asistente virtual
+
+El botón flotante de WhatsApp abre un asistente con IA (repo `dr-ghilino-assistant`) que responde con la información de este sitio y ofrece WhatsApp desde el saludo. El script lo sirve una función de InsForge y se carga solo en producción (`src/components/assistant-widget.tsx`). Si no carga, el botón sigue siendo un link común a WhatsApp (`src/components/whatsapp-button.tsx`).
+
+## Seguridad
+
+`next.config.ts` manda encabezados de seguridad y una Content-Security-Policy que solo deja cargar lo propio, Google Analytics, el mapa de Google y el asistente. **Si se suma un servicio externo (un script, un iframe, una API), hay que agregar su dominio ahí**, o el navegador lo bloquea. La política no se aplica en `npm run dev`.
+
 ## Dominio
 
 El sitio vive en `drluisghilino.com.ar`, registrado en NIC Argentina y delegado a los DNS de Vercel (`ns1.vercel-dns.com` y `ns2.vercel-dns.com`), así que los registros DNS se manejan desde Vercel. `www` y `drluisghilino.vercel.app` redirigen al dominio.
@@ -49,12 +57,13 @@ No tiene servidor. Arma el mensaje y lo abre en WhatsApp o en el correo de la pe
 
 Google Analytics 4 (`G-CP422LDH6D`, en `src/content/site.ts`) se carga solo en producción, así que las previews y el desarrollo local no suman visitas. Además de las visitas, el sitio manda estos eventos (`src/components/analytics-events.tsx` y el formulario):
 
-| Evento               | Cuándo                             | Parámetros                               |
-| -------------------- | ---------------------------------- | ---------------------------------------- |
-| `clic_whatsapp`      | Clic en cualquier link de WhatsApp | `seccion`                                |
-| `clic_telefono`      | Clic en el teléfono                | `seccion`                                |
-| `clic_correo`        | Clic en el correo                  | `seccion`                                |
-| `clic_como_llegar`   | Clic en "Cómo llegar"              | `seccion`, `consultorio`                 |
-| `formulario_enviado` | Envío válido del formulario        | `via` (whatsapp o correo), `consultorio` |
+| Evento               | Cuándo                              | Parámetros                               |
+| -------------------- | ----------------------------------- | ---------------------------------------- |
+| `clic_whatsapp`      | Clic que abre WhatsApp              | `seccion`                                |
+| `abrir_asistente`    | El botón flotante abre el asistente | `seccion`                                |
+| `clic_telefono`      | Clic en el teléfono                 | `seccion`                                |
+| `clic_correo`        | Clic en el correo                   | `seccion`                                |
+| `clic_como_llegar`   | Clic en "Cómo llegar"               | `seccion`, `consultorio`                 |
+| `formulario_enviado` | Envío válido del formulario         | `via` (whatsapp o correo), `consultorio` |
 
 Nunca se mandan el nombre ni el motivo de la consulta.

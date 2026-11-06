@@ -1,7 +1,8 @@
 "use client"
 
 import { Menu, X } from "lucide-react"
-import { useEffect, useState } from "react"
+import Link from "next/link"
+import { useEffect, useRef, useState } from "react"
 
 import { doctor, nav } from "@/content/site"
 import { whatsappUrl } from "@/lib/links"
@@ -11,6 +12,7 @@ import { LogoMark, WhatsAppIcon } from "./icons"
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const toggleRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12)
@@ -21,8 +23,11 @@ export function Header() {
 
   useEffect(() => {
     if (!open) return
+    // Escape cierra el menú y devuelve el foco al botón que lo abrió.
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false)
+      if (event.key !== "Escape") return
+      setOpen(false)
+      toggleRef.current?.focus()
     }
     window.addEventListener("keydown", onKey)
     return () => window.removeEventListener("keydown", onKey)
@@ -37,8 +42,8 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-6 px-4 sm:px-6">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="flex items-center gap-3 rounded-full"
           onClick={() => setOpen(false)}
         >
@@ -51,7 +56,7 @@ export function Header() {
               Traumatología
             </span>
           </span>
-        </a>
+        </Link>
 
         <nav aria-label="Principal" className="hidden lg:block">
           <ul className="flex items-center gap-1">
@@ -79,6 +84,7 @@ export function Header() {
             Pedir turno
           </a>
           <button
+            ref={toggleRef}
             type="button"
             className="inline-flex size-11 items-center justify-center rounded-full border border-navy/15 text-navy lg:hidden"
             aria-expanded={open}

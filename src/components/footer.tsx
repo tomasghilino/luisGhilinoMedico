@@ -1,6 +1,6 @@
 import {
   contact,
-  credits,
+  developers,
   doctor,
   locations,
   nav,
@@ -88,14 +88,22 @@ export function Footer() {
           <p>
             © {year} Dr. {doctor.fullName}. Todos los derechos reservados.
           </p>
-          <a
-            href={credits.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-navy"
-          >
-            {credits.label}
-          </a>
+          <p>
+            Sitio desarrollado por{" "}
+            {developers.map((developer, i) => (
+              <span key={developer.href}>
+                {i > 0 && " y "}
+                <a
+                  href={developer.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline-offset-2 hover:text-navy hover:underline"
+                >
+                  {developer.name}
+                </a>
+              </span>
+            ))}
+          </p>
         </div>
       </div>
     </footer>

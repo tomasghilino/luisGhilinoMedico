@@ -25,6 +25,11 @@ export const site = {
   assistantApi: "https://c94k6z7z.us-east.insforge.app/functions/chat-api",
 }
 
+export type CredentialId =
+  "experiencia" | "uba" | "colegio" | "castex" | "hospital-san-isidro"
+
+type Credential = { id: CredentialId; title: string; detail: string }
+
 export const doctor = {
   givenName: "Luis Antonio",
   familyName: "Ghilino",
@@ -68,7 +73,7 @@ export const doctor = {
       title: "Ex integrante del Servicio de Traumatología",
       detail: "Hospital Central de San Isidro.",
     },
-  ],
+  ] satisfies Credential[],
 }
 
 export const consultationFee = "$50.000"
@@ -107,7 +112,8 @@ export type Location = {
   mapsQuery: string
 }
 
-export const locations: Location[] = [
+// Al menos un consultorio: el selector de mapas arranca por el primero.
+export const locations: [Location, ...Location[]] = [
   {
     id: "san-miguel",
     city: "San Miguel",
@@ -171,6 +177,16 @@ export function scheduleDays(location: Location) {
   return location.slots.map(slot => slot.shortLabel).join(" · ")
 }
 
+// "En San Miguel, sin turno previo: …; en Boulogne, confirmá la consulta por WhatsApp antes de ir"
+export function visitText() {
+  return locations
+    .map(
+      (l, i) =>
+        `${i ? "en" : "En"} ${l.city}, ${l.note.charAt(0).toLowerCase()}${l.note.slice(1)}`,
+    )
+    .join("; ")
+}
+
 // "Boulogne (San Isidro)"
 export function placeName(location: Location) {
   return location.district
@@ -183,7 +199,7 @@ const listFormat = new Intl.ListFormat("es", { type: "conjunction" })
 // "San Miguel y Boulogne"
 export const cityList = listFormat.format(locations.map(l => l.city))
 
-export type Pathology = {
+type Pathology = {
   id: string
   title: string
   text: string
@@ -295,7 +311,7 @@ export const nav = [
   { href: "#contacto", label: "Contacto" },
 ]
 
-export const credits = {
-  label: "Desarrolladores",
-  href: "https://pastebin.com/CDvqnEDP",
-}
+export const developers = [
+  { name: "Tomás Ghilino", href: "https://github.com/tomasghilino" },
+  { name: "Franco Brumatti", href: "https://github.com/FrancoBrumatti" },
+]

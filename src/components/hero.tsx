@@ -33,7 +33,7 @@ export function Hero() {
             className="rise mt-6 font-display text-5xl leading-[1.02] font-medium tracking-tight text-balance text-navy sm:text-6xl lg:text-7xl"
             style={{ "--i": 1 } as React.CSSProperties}
           >
-            Dr. Luis Antonio Ghilino
+            Dr. {doctor.fullName}
           </h1>
           <p
             className="rise mt-6 max-w-xl text-xl leading-relaxed text-pretty text-muted"
