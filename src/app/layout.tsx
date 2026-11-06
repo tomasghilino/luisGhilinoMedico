@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Fraunces, Inter } from "next/font/google"
 
 import { AnalyticsEvents } from "@/components/analytics-events"
+import { AssistantWidget } from "@/components/assistant-widget"
 import { GoogleAnalytics } from "@/components/google-analytics"
 import { doctor, site } from "@/content/site"
 
@@ -69,6 +70,8 @@ export default function RootLayout({
         </a>
         {children}
         <AnalyticsEvents />
+        {/* El asistente solo acepta mensajes desde el dominio publicado, así que las previews no lo cargan. */}
+        {process.env.VERCEL_ENV === "production" && <AssistantWidget />}
       </body>
       {/* Solo se mide el sitio publicado: las previews y el desarrollo local no ensucian las estadísticas. */}
       {process.env.VERCEL_ENV === "production" && (
