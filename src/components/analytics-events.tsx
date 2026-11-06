@@ -26,6 +26,8 @@ function sectionOf(link: Element) {
 export function AnalyticsEvents() {
   useEffect(() => {
     const onClick = (event: MouseEvent) => {
+      // Un clic que no navegó (el botón flotante que abre el asistente) no es un clic a WhatsApp.
+      if (event.defaultPrevented) return
       const link = (event.target as Element | null)?.closest("a[href]")
       const href = link?.getAttribute("href")
       const name = href && eventFor(href)
