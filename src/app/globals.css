@@ -10,7 +10,6 @@
   --color-aqua: #75e6da;
   --color-mist: #d4f1f4;
   --color-paper: #eff6f7;
-  --color-stone: #d6d6d6;
   --color-muted: #3f5761;
   --color-whatsapp: #25d366;
 
@@ -93,13 +92,4 @@
       animation-range: entry 0% entry 60%;
     }
   }
-}
-
-/* Textura sutil tipo placa radiográfica para fondos oscuros. */
-.grain {
-  background-image: radial-gradient(
-    rgb(212 241 244 / 0.07) 1px,
-    transparent 1px
-  );
-  background-size: 22px 22px;
 }

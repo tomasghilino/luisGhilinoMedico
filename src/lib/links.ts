@@ -1,7 +1,6 @@
 import { contact, type Location } from "@/content/site"
 
-export const defaultWhatsAppText =
-  "Hola Dr. Ghilino, quisiera hacer una consulta."
+const defaultWhatsAppText = "Hola Dr. Ghilino, quisiera hacer una consulta."
 
 export function whatsappUrl(text = defaultWhatsAppText) {
   return `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(text)}`

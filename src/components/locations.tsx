@@ -1,4 +1,4 @@
-import { cityList, doctor } from "@/content/site"
+import { cityList, doctor, visitText } from "@/content/site"
 
 import { SectionHeading } from "./section-heading"
 import { LocationsPicker } from "./locations-picker"
@@ -15,7 +15,7 @@ export function Locations() {
           id="consultorios-titulo"
           eyebrow="Consultorios"
           title="Dónde y cuándo atiende"
-          intro={`${doctor.practice} en ${cityList}. En San Miguel se atiende sin turno, por orden de llegada; en Boulogne, confirmá la consulta por WhatsApp antes de ir.`}
+          intro={`${doctor.practice} en ${cityList}. ${visitText()}.`}
         />
         <LocationsPicker />
       </div>

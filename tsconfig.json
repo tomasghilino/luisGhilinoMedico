@@ -20,6 +20,7 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    "noUncheckedIndexedAccess": true,
     "allowJs": true
   },
   "include": [

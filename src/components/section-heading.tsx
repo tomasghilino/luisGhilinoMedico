@@ -3,7 +3,6 @@ type SectionHeadingProps = {
   eyebrow: string
   title: string
   intro?: string
-  align?: "left" | "center"
 }
 
 export function SectionHeading({
@@ -11,13 +10,11 @@ export function SectionHeading({
   eyebrow,
   title,
   intro,
-  align = "left",
 }: SectionHeadingProps) {
-  const centered = align === "center"
   return (
-    <div className={centered ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+    <div className="max-w-2xl">
       <p className="flex items-center gap-3 text-sm font-semibold tracking-[0.18em] text-teal-strong uppercase">
-        {!centered && <span aria-hidden="true" className="h-px w-8 bg-teal" />}
+        <span aria-hidden="true" className="h-px w-8 bg-teal" />
         {eyebrow}
       </p>
       <h2
